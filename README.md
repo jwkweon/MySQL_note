@@ -37,3 +37,38 @@ SELECT DISTINCT last_name
 FROM employees
 ORDER BY last_name
 ```
+
+### Limit 출력 제한
+
+`LIMIT num`을 통해서 출력 수를 제한할 수 있음
+
+```sql
+SELECT *
+FROM employees
+LIMIT 100
+```
+
+sql workbench 자체적으로 limit이 걸려있음
+
+### GROUP BY
+
+같은 CountryCode를 가진 애들 중 Population이 가장 큰 것을 보여줌
+이때 AS는 별칭을 바꾸는 역할
+
+```sql
+SELECT CountryCode, MAX(Population) AS 'max'
+FROM city
+GROUP BY CountryCode
+```
+
+`MAX()` 외에도 많은 집계함수 (Aggregate Function)들이 있음
+
+```
+AVG() : 평균
+MIN() : 최소값
+MAX() : 최대값
+COUNT() : 행의 개수
+COUNT(DISTINCT) : 중복 제외된 행의 개수
+STDEV() : 표준편차
+VARIANCE() : 분산
+```
