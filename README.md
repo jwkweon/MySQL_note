@@ -72,3 +72,23 @@ COUNT(DISTINCT) : 중복 제외된 행의 개수
 STDEV() : 표준편차
 VARIANCE() : 분산
 ```
+
+### DATE_FORMAT
+
+날짜 입력에 대해서 형식을 지정해줌
+```sql
+SELECT data_format(date, '%Y-%m-%d')
+```
+
+```sql
+SELECT data_format(date, 'YYYY-mm-dddd')
+```
+
+주의점 
+
+```sql
+SELECT data_format(date, '%Y-%M-%D')
+```
+이때 `%M`은 영어로 3월은 Mar과 같이 출력됨
+`%D`는 뒤에 st, rd, th같은 기수로 출력됨
+
