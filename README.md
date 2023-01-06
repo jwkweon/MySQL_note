@@ -89,6 +89,6 @@ SELECT data_format(date, 'YYYY-mm-dddd')
 ```sql
 SELECT data_format(date, '%Y-%M-%D')
 ```
-이때 `%M`은 영어로 3월은 Mar과 같이 출력됨
+이때 `%M`은 영어로 3월은 March와 같이 영어로 출력됨
 `%D`는 뒤에 st, rd, th같은 기수로 출력됨
 
